@@ -59,15 +59,15 @@ class GUI:
 
         solvedgrid = search(values)
 
-        x = 0
+        x = 10
         y = 15
-        canvas = tk.Canvas(self.root, width=300, height=400, bg="blue3")
-        canvas.grid(row=11, column=0, columnspan=9, rowspan=9)
+        canvas = tk.Canvas(self.root, width=350, height=400, bg="blue3")
+        canvas.grid(row=11, column=0, columnspan=10, rowspan=9)
         for key, value in solvedgrid.items():
             canvas.create_text(x, y, text=value, width=3, fill="white")
-            x += 30
-            if x == 270:
-                x = 0
+            x += 40
+            if x == 370:
+                x = 10
                 y += 30
         return canvas
 
